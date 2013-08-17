@@ -1,0 +1,741 @@
+@import compass
+@import compass/css3
+@import compass/layout
+@import compass/utilities/lists/bullets
+@import susy
+@import normalize
+@import base
+@import media
+
+// +sticky-footer(100px)
++sticky-footer(100px, "#page", "#layout_footer", "#footer")
+
+
+$base-font-size: 18px
+$base-line-height: 30px
++establish-baseline                 
+
+/* --------------------------------FONTS-------------------------------------------*/
+
+
++font-face("Metrophobic", font-files("/fonts/Metrophobic/Metrophobic.ttf"))
++font-face("Open-Sans-Light", font-files("/fonts/Open_Sans/OpenSans-Light.ttf"))
+
+.metro
+  font-family: "Metrophobic", Arial, "Helvetica Neue", Helvetica, sans-serif
+  font-size: 1em
+
+.open-sans-light
+  font-family: "Open-Sans-Light", Arial, "Helvetica Neue", Helvetica, sans-serif
+  font-size: 1em
+
+a
+  @extend .metro
+  color: black
+  outline: 0
+
+  &:visited
+    color: black
+  &:hover
+    color: #0066ff
+  &:focus
+    color: #0066ff
+    outline: 0
+    border-bottom: 1px solid #0033ff
+  &:active
+    color: #0000ff
+
+p 
+  @extend .metro
+  +leader(1)
+  +trailer(1)
+
+
+#layout_footer
+  height: 100px
+
+img
+  width: 100%
+  +trailer(.5)
+
+
+h1
+  @extend .metro
+  +adjust-font-size-to(30px)
+  +adjust-leading-to(1, 30px)
+
+h2
+  @extend .metro
+  +adjust-font-size-to(25px)
+  +adjust-leading-to(1, 25px)
+
+.design-title
+  color: black
+.client
+  color: #666666
+  +adjust-font-size-to(20px)
+  +adjust-leading-to(1, 20px)
+.year
+  @extend .open-sans-light
+  color: #666666
+  +adjust-font-size-to(15px)
+  +adjust-leading-to(1, 15px)
+  // +trailer(1, 15px)
+
+h3
+  @extend .metro
+  +adjust-font-size-to(20px)
+  +adjust-leading-to(1, 20px)
+
+ul.pretty
+  +pretty-bullets("/images/eyebullet-10.jpg", 10px, 10px, 32px) 
+  +trailer(1)
+  li
+    @extend .metro
+    padding-left: 30px
+    // padding-top: -20px
+    // background: lightcyan
+
+footer  
+  p
+    +pre(1, 4)
+
+  .icon
+    display: block
+    height: 30px 
+    width: 30px   
+    margin-left: 1em
+
+
+    svg  
+      fill: #666666
+
+      &:hover
+        fill: #0066ff
+      &:focus
+        fill: #0066ff
+        outline: 0
+      &:active
+        color: #0000ff
+      &:visited
+        color: #666666
+
+
+  .madeby
+    margin-left: 1em
+    
+    p
+      +leader(0)
+      +trailer(0)
+      margin-left: -0em
+      font-size: .85em
+      color: #666666
+      // background: red
+      @extend .open-sans-light 
+
+  .maxmythic
+    display: block
+    height: 28px 
+    width: 60px   
+    
+
+#page, header, .pagenav, .main, .tile, #footer, a
+  +transition(all .3s ease)
+
+/* 5 Column Layout */
+
+#page                                
+  +container($total-columns, $tablet, $desktop)
+  // +susy-grid-background
+
+/* ------------------- BREAKPOINTS ---------------------------- */
+/* ------------------- MOBILE (default) ------------------------*/
+
+p
+  +leader(0)
+
+.image-group-title
+  @extend h3
+  @extend .open-sans-light
+  +span-columns(3.75)
+  +prefix(.25, 4)
+  padding-top: .5em
+  padding-bottom: .5em
+  font-style: bold
+  +trailer(.5)
+  background: #ddffff
+  border-bottom: 1px solid #66ffff
+  +adjust-font-size-to(15px)
+  +adjust-leading-to(1, 15px)
+
+.caption
+  @extend .open-sans-light
+  // +span-columns(6, 9)
+  color: #666666
+  font-style: italic
+  text-align: right
+  +adjust-font-size-to(15px)
+  +adjust-leading-to(1, 15px)
+  // background: rgba(250,250,100,.6)
+
+header
+  +container
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  height: 2em
+  // padding-top: .5em
+  background: rgba(250,250,250,.8)
+  // background: white
+  // border-top: 1px dotted #aaa
+  z-index: 3
+
+  h1.logo
+    +span-columns(1)
+    // font-size: 12px
+    // background: green
+    +hide-text
+    margin-top: .2em
+
+    a
+      // background: red
+
+      svg
+        // background: red
+        // margin-top: .5em
+        // +leader(1)
+        float: left
+        width: 100%
+        height: 28px
+        fill: black
+
+        &:hover
+          fill: #0066ff
+          +transition(fill .3s ease)
+        &:focus
+          fill: #0066ff
+          outline: 0
+          border-bottom: 1px solid #0033ff
+        &:active
+          fill: #0000ff
+        &:visited
+          fill: black
+
+  .pagenav
+    +span-columns(3 omega, 4)
+    margin-top: .1em
+    // background: purple
+
+    ul
+      +inline-block-list
+      float: right
+      +no-bullets
+      // background: red
+
+      li
+        // display: inline
+        // float: right
+
+
+        a
+          margin-left: .4em
+          +adjust-font-size-to(16px)
+          +adjust-leading-to(1, 16px)
+          // padding: .1em
+          // background: rgba(250,250,100,.6)
+
+
+.main
+  +span-columns(4)
+  +leader(1)
+  +trailer(2)
+  // background: rgba(1,240,200,.3)
+  ul
+    +no-bullets
+
+  .email
+    +span-columns(4)
+    +adjust-font-size-to(20px)
+    +adjust-leading-to(1, 20px)
+    color: white
+    background: #33dd33
+    text-align: center
+    padding-top: 2em
+    padding-bottom: 2em 
+    &:hover
+      background: #33ff33
+      
+  .contact
+    +span-columns(4)
+
+  .about-list
+    // background: red
+    +leader(0)
+    +trailer(.5)
+    +pre(.5, 6)
+
+  .version
+    // margin-right: .25em
+    float: right
+    clear: both
+    color: #666666
+    +trailer(0)
+
+  p
+    a
+      color: #0066ff
+      &:visited
+        color: #0066ff
+        // border-bottom: 1px dotted #0066ff
+      &:hover
+        color: #0011ff
+        // border-bottom: 1px solid #0066ff
+        background: #ddffff
+      &:focus
+        color: #0011ff
+        // border-bottom: 1px solid #0066ff
+        background: #ddffff
+        outline: 0
+      &:active
+        color: #0011ff
+        background: #ddffff
+        // border-bottom: 1px solid #0066ff
+
+
+.tile
+  +isolate-grid(2, 4)
+  +fluid-ratio(1/1, columns(2,4))
+  // margin-bottom: 1em
+  background-repeat: no-repeat
+  background-size: 100% auto
+  background-position: center top
+  border-top: 0 solid #0066ff
+  +transition(all .3s ease-out)
+  &:hover
+    // +fluid-ratio(1/1, columns(2,4))
+    +transition(all .3s ease-in)
+    border-top: 1em solid #0066ff
+    // z-index: 5
+
+
+  .tile-info
+    // padding: 10px
+
+    .tile_title
+      +adjust-font-size-to(12px)
+      +adjust-leading-to(1, 12px)
+      // background: rgba(250,250,250,1)
+      // color: white
+      padding: 0 10px 
+      margin: 9% 0 0 0
+      display: inline-block
+      +hide-text
+
+
+    .tile_use
+      @extend .tile_title
+      +adjust-font-size-to(10px)
+      +adjust-leading-to(1, 10px)
+
+/*_______________TILES_____________*/
+
+.vance-and-gary-unhinged
+  @extend .tile
+  background-image: url("../images/tiles/325/Vance-&-Gary-Unhinged-325.jpg") 
+
+.dam-funk
+  @extend .tile
+  background-image: url("../images/tiles/325/DF_Logo-325.jpg") 
+
+.relationships
+  @extend .tile
+  background-image: url("../images/tiles/325/Relationships-325.jpg") 
+
+.lemy-leopard-soh
+  @extend .tile
+  background-image: url("../images/tiles/325/SOH-325.jpg") 
+
+.popr0n
+  @extend .tile
+  background-image: url("../images/tiles/325/popr0n-325.jpg") 
+
+.i-is-the-path
+  @extend .tile
+  background-image: url("../images/tiles/325/I_IS_PATH-325.jpg") 
+
+.m3d
+  @extend .tile
+  background-image: url("../images/tiles/325/m3d-325.jpg") 
+                                             
+.culture-blind
+  @extend .tile
+  background-image: url("../images/tiles/325/MaxMythic_CultureBlind-325.jpg") 
+
+.raverz
+  @extend .tile
+  background-image: url("../images/tiles/325/RAVERS-325.jpg") 
+
+.various-sketches
+  @extend .tile
+  background-image: url("../images/tiles/325/various_sketches-325.jpg") 
+
+.chaos-conspiracies
+  @extend .tile
+  background-image: url("../images/tiles/325/chaos_conspiracies-325.jpg") 
+
+.the-yellers
+  @extend .tile
+  background-image: url("../images/tiles/325/the_yellers-325.jpg") 
+
+.cloudsick
+  @extend .tile
+  background-image: url("../images/tiles/325/cloudsick-325.jpg") 
+
+.paintjob
+  @extend .tile
+  background-image: url("../images/tiles/325/paintjob-325.jpg") 
+
+.future-shock-logo
+  @extend .tile
+  background-image: url("../images/tiles/325/FutureShock_Logo-325.jpg") 
+
+.troonz
+  @extend .tile
+  background-image: url("../images/tiles/325/TROONz-325.jpg") 
+
+.fame-logo
+  @extend .tile
+  background-image: url("../images/tiles/325/FAME_Logo-325.jpg") 
+
+.lounge-coffee
+  @extend .tile
+  background-image: url("../images/tiles/325/lounge_coffee-325.jpg") 
+
+.maxmythic-dot-com
+  @extend .tile
+  background-image: url("../images/tiles/325/maxmythic-dot-com-325.jpg") 
+
+#footer
+  // background: purple
+  height: 80px
+  padding-bottom: 1em 
+  margin: 0 1em
+
+  ul
+    +inline-block-list
+    float: right
+    // margin-right: 1em
+
+    .madeby
+      margin-left: 1em
+
+
+
+
+// /* ------------------- TABLET ----------------------------------*/
+
++at-breakpoint($tablet)
+
+  // $base-font-size: 18px
+  // $base-line-height: 30px
+  // +establish-baseline
+
+  #page
+    +container
+    // +susy-grid-background
+
+  p
+    +leader(0)
+
+
+  img
+    width: 100%
+    +trailer(1)
+
+  header
+    +container
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    height: 2.3em
+    padding-top: .3em
+
+    background: rgba(250,250,250,.7)
+      
+    h1.logo
+      +span-columns(2)
+      font-size: 12px
+      // background: green
+      +hide-text
+      margin-top: 0
+
+      a
+        background: red
+
+        svg
+          // background: red
+          padding: 5px
+          // margin-top: .5em
+          // +leader(1)
+          float: left
+          width: 97px
+          height: 28px
+
+    .pagenav
+      +span-columns(5 omega,9)
+
+      ul
+        +inline-block-list
+        float: right
+        margin-right: -15px
+        // background: red
+        li
+          // float: right
+          // display: inline
+          // background: red
+          a
+            margin-left: 1em
+            padding: 15px
+            +adjust-font-size-to(18px)
+            +adjust-leading-to(1, 18px)
+            // background: rgba(250,250,100,.6)
+
+  .main
+    +span-columns(9)
+    +trailer(2)
+
+    .email
+      +span-columns(5, 9)
+      +pre(2)
+      +adjust-font-size-to(30px)
+      +adjust-leading-to(1, 30px)
+
+    .contact
+      +span-columns(5, 9)
+      +pre(2)
+
+    img 
+      +span-columns(6, 9)
+
+    .img-4-wide
+      +span-columns(3, 9)
+
+    .image-group-title
+      +span-columns(5.5, 9)
+      +prefix(.5, 9)
+      // padding: 1em 0
+      padding-top: .5em
+      padding-bottom: .5em
+      +trailer(.5)
+
+    .troonz-detail
+      +span-columns(3, 9)
+
+    .version
+      float: right
+      clear: both
+      color: #666666
+      +trailer(0)
+
+    // .caption
+    //   @extend .open-sans-light
+    //   +span-columns(6, 9)
+    //   color: #666666
+    //   font-style: italic
+    //   text-align: right
+    //   // background: rgba(250,250,100,.6)
+
+    .about-img
+      +span-columns(5, 9)
+    p
+      +pre(6)
+      a
+        // border-bottom: 1px dotted #0066ff
+        // margin: 0 .5em
+        color: #0066ff
+        padding: .5em .5em
+        &:visited
+          color: #0066ff
+          // border-bottom: 1px dotted #0066ff
+        &:hover
+          color: #0011ff
+          // border-bottom: 1px solid #0066ff
+          background: #ddffff
+        &:focus
+          color: #0011ff
+          // border-bottom: 1px solid #0066ff
+          background: #ddffff
+          outline: 0
+        &:active
+          color: #0011ff
+          background: #ddffff
+          // border-bottom: 1px solid #0066ff
+      
+    p.about-info, ul
+      // +span-columns(4 omega, 9)
+      +pre(5)
+      +no-bullets
+
+    .about-list
+      // background: red
+      +leader(0)
+      +trailer(.5)
+      +pre(.5, 6)
+
+  .tile
+    +isolate-grid(3, 9)
+    +fluid-ratio(1/1, columns(3,9))
+
+    .tile-info
+
+      .tile_title
+        background: white
+        text-indent: 0%
+        +adjust-font-size-to(15px)
+        +adjust-leading-to(1, 15px)
+
+  #footer
+    margin-right: 1em
+    // background: red
+    height: 90px
+
+
+/* -------------------DESKTOP ----------------------------------*/
+
++at-breakpoint($desktop)
+  #page
+    +container
+    // +susy-grid-background
+    +pull(.5)
+
+
+  header
+    +container
+    +pull(.4)
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    height: 0
+    padding-top: 0
+    z-index: 3
+
+    h1.logo
+      +span-columns(2)
+      font-size: 12px
+      // background: green
+      +hide-text
+      margin-top: 0
+
+      a
+        // +span-columns(2)
+
+        svg
+          // background: red
+          +leader(1)
+          float: right
+          width: 97px
+          height: 38px
+
+    .pagenav
+      +span-columns(2)
+      +pull(.27)
+      +leader(.5)
+      clear: both
+      // background: rgba(150,200,250,.3)
+
+      ul
+        li
+          margin-bottom: 1em
+          float: right
+          clear: both
+          a
+            padding: 5px
+            +adjust-font-size-to(20px)
+            +adjust-leading-to(1, 20px)
+      
+   
+
+  .main
+    +span-columns(12 omega)
+    // +leader(2)
+    z-index: 1
+    position: relative
+    +trailer(2)
+    // background: rgba(1,240,200,.3)
+
+    .version
+      // +span-columns(2 omega, 12)
+      float: right
+      clear: both
+      color: #666666
+      +trailer(0)
+
+    .email
+      +span-columns(6, 12)
+      +pre(3)
+
+    .contact
+      +span-columns(6, 12)
+      +pre(3)
+
+    .image-group-title
+      +span-columns(7.5, 12)
+      // +pull(.5)
+      padding: 1em 0
+      +prefix(.5, 12)
+      +trailer(1)
+      
+    .troonz-detail
+      +span-columns(3, 12)
+
+    .about-img
+      +span-columns(6, 12)
+
+    .img-4-wide
+      +span-columns(4, 12)
+
+    img 
+      +span-columns(8, 12)
+      // clear: both
+
+    p
+      +pre(8, 12)
+      // +span-columns(4 omega, 12)
+      // float: left
+
+    p.about-info, ul
+      +pre(7)
+      +no-bullets
+
+    .about-list
+      // background: red
+      +leader(0)
+      +trailer(.5)
+      +pre(1, 6)
+
+
+      
+
+  .tile
+    +isolate-grid(4, 12)
+    +fluid-ratio(1/1, columns(4,12))
+
+    // &:hover
+    //   +fluid-ratio(1/1, columns(3.8,12))
+    //   border: 5% solid #0066ff
+    //   z-index: 500
+
+    .tile-info
+
+      .tile_title
+        +adjust-font-size-to(17px)
+        +adjust-leading-to(1, 17px)
+
+
+  #footer
+    margin: 0 1em
+    // background: pink
+    height: 50px

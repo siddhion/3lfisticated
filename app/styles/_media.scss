@@ -1,0 +1,74 @@
+// ----------------------------------------------------------------------------
+// Fluid Media
+
+// Default property-value pair for setting fluid width.
+$default-fluid-width    : max-width 100%  !default;
+
+// Default list of elements for the fluid-media mixin.
+$default-fluid-elements : 'img, video'    !default;
+
+// Create fluid images and video
+//
+// @include fluid-media([$width, $elements])
+// - $width     : Property-value pair for setting fluid width.
+// - $elements  : List of elements for the fluid-media mixin.
+@mixin fluid-media(
+  $width    : $default-fluid-width,
+  $elements : $default-fluid-elements
+) {
+  $property : max-width;
+  $value    : 100%;
+
+  @each $arg in $width {
+    @if type-of($arg) == 'string' { $property: $arg; }
+    @if type-of($arg) == 'number' { $value: $arg; }
+  }
+
+  #{$elements} {
+    #{$property}: $value;
+    height: auto;
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Fluid Ratios
+
+// The default fluid ratio.
+$default-fluid-ratio          : 16/9          !default;
+
+// The default fluid ratio width.
+$default-fluid-ratio-width    : 100%          !default;
+
+// Child elements to keep within the ratio.
+// $default-fluid-ratio-children : '*'           !default;
+$default-fluid-ratio-children : 'div'           !default;
+
+// Force an element and its children to hold a fluid ratio
+//
+// @include fluid-ratio([$ratio, $width, $children])
+// - $ratio     : Ratio e.g. 16/9
+// - $width     : Fluid width
+// - $children  : Child elements to keep within the ratio
+@mixin fluid-ratio(
+  $ratio      : $default-fluid-ratio,
+  $width      : $default-fluid-ratio-width,
+  $children   : $default-fluid-ratio-children
+) {
+  position: relative;
+  height: 0;
+  padding-top: (1 / $ratio) * $width + 2%;
+  // margin-bottom: 1em ;
+  width: $width;
+
+  @if $children {
+    > #{$children} {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
