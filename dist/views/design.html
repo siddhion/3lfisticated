@@ -1,0 +1,7 @@
+<section ng-controller="MainCtrl" class="main">
+  <a ng-repeat="tile in designTiles" ng-href="{{tile.url}}" class="{{tile.bgImageClass}}">
+    <div class="tile-info">
+      <h3 class="tile_title">{{tile.title}}</h3>
+    </div>
+  </a>
+</section>
