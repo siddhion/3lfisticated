@@ -1,5 +1,5 @@
 <section ng-controller="MainCtrl" class="main">
-  <a ng-repeat="tile in designTiles" ng-href="{{tile.url}}" class="{{tile.bgImageClass}}">
+  <a href="#" ng-repeat="tile in designTiles" ng-href="{{tile.url}}" class="{{tile.bgImageClass}}">
     <div ng-mouseenter="blankBar='blueBar'" ng-mouseleave="blankBar = 'blankBar'" class="tile-info">
       <div class="blankBar" ng-class="blankBar"></div>
       <h3 class="tile_title">{{tile.title}}</h3>
