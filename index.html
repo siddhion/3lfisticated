@@ -6,6 +6,18 @@
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <!--[if lt IE 9]>      <script src="scripts/html5shiv.js"></script> <![endif]-->
   <head>
+    <!--[if lte IE 8]>
+    <script>
+       document.createElement('ng-include');
+       document.createElement('ng-pluralize');
+       document.createElement('ng-view');
+
+       // Optionally these for CSS
+       document.createElement('ng:include');
+       document.createElement('ng:pluralize');
+       document.createElement('ng:view');
+    </script>
+    <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>/\/\/\</title>
