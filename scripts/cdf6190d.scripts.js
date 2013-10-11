@@ -93,6 +93,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/maxmythic-dot-com.html',
         controller: 'MainCtrl'
       })
+      .when('/design/fools-gold', {
+        templateUrl: '/views/design/fools-gold-records.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -207,6 +211,12 @@ angular.module('maxmythicApp')
         url : '/design/maxmythic-dot-com',
         bgImageClass : 'maxmythic-dot-com',
         title : 'maxmythic.com',
+        // use : 'Logo'
+      },
+      {
+        url : '/design/fools-gold',
+        bgImageClass : '',
+        title : '',
         // use : 'Logo'
       },
     ];
