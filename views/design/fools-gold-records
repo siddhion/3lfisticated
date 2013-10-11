@@ -1,0 +1,13 @@
+<section ng-controller="MainCtrl" class="main">
+  <img src="/images/320/faa4412c.DF_Logo_2012_GLOW-320.jpg" ng-src-responsive="[ [ '(min-width: 480px)', '/images/480/2fbf4efc.DF_Logo_2012_GLOW-480.jpg' ], [ '(min-width: 660px)', '/images/660/49c2a826.DF_Logo_2012_GLOW-660.jpg' ], [ '(min-width: 770px)', '/images/770/02ef4b29.DF_Logo_2012_GLOW-770.jpg' ], [ '(min-width: 990px)', '/images/990/6590fb7f.DF_Logo_2012_GLOW-990.jpg' ] ]">
+
+
+  <h2 class="design-title">Fool's Gold Product Concept</h2>
+  <h2 class="client">Fool's Gold Records</h2>
+  <h2 class="year">2013</h2>
+  <br>
+ 
+  <p>
+  Additionally Dam-Funk asked if I still had one of the concept designs I made for his 2009 logo. It was a simple D and F side by side. He wanted to use it as a t-shirt design which is now available in his <a target="_blank" href="http://damfunk.bigcartel.com/">online store</a>. 
+  </p>
+</section>
