@@ -213,12 +213,6 @@ angular.module('maxmythicApp')
         title : 'maxmythic.com',
         // use : 'Logo'
       },
-      {
-        url : '/design/fools-gold',
-        bgImageClass : 'fools-gold',
-        title : 'Fools Gold,
-        // use : 'Logo'
-      },
     ];
   });
 
