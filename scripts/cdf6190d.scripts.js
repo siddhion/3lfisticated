@@ -93,8 +93,8 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/maxmythic-dot-com.html',
         controller: 'MainCtrl'
       })
-      .when('/design/fools-gold', {
-        templateUrl: '/views/design/fools-gold-records.html',
+      .when('/fools-gold-recs', {
+        templateUrl: '/views/fools-gold-recs.html',
         controller: 'MainCtrl'
       })
       .otherwise({
