@@ -215,8 +215,8 @@ angular.module('maxmythicApp')
       },
       {
         url : '/design/fools-gold',
-        bgImageClass : '',
-        title : '',
+        bgImageClass : 'fools-gold',
+        title : 'Fools Gold,
         // use : 'Logo'
       },
     ];
