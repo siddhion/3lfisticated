@@ -93,8 +93,8 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/maxmythic-dot-com.html',
         controller: 'MainCtrl'
       })
-      .when('/fools-gold-recs', {
-        templateUrl: '/views/fools-gold-recs.html',
+      .when('/design/fools-gold-recs', {
+        templateUrl: '/views/design/fools-gold-recs.html',
         controller: 'MainCtrl'
       })
       .otherwise({
@@ -105,6 +105,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/fools-gold-recs',
+        bgImageClass : 'fools-gold-recs',
+        title : "Fool's Gold Records",
+        // use : 'Logo'
+      },
       {
         url : '/design/vance-and-gary-unhinged',
         bgImageClass : 'vance-and-gary-unhinged',
