@@ -106,8 +106,8 @@ angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
       {
-        url : '/design/fools-gold-recs',
-        bgImageClass : 'fools-gold-recs',
+        url : '/design/maxmythic-dot-com',
+        bgImageClass : 'maxmythic-dot-com',
         title : "Fool's Gold Records",
         // use : 'Logo'
       },
@@ -214,9 +214,9 @@ angular.module('maxmythicApp')
         // use : 'Logo'
       },
       {
-        url : '/design/maxmythic-dot-com',
-        bgImageClass : 'maxmythic-dot-com',
-        title : 'maxmythic.com',
+        url : '/design/fools-gold-recs',
+        bgImageClass : 'fools-gold-recs',
+        title : "Fool's Gold Records",
         // use : 'Logo'
       },
     ];
