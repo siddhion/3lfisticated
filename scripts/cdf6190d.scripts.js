@@ -117,7 +117,7 @@ angular.module('maxmythicApp')
       },
       {
         url : '/design/fools-gold-recs',
-        bgImageClass : 'maxmythic-dot-com',
+        bgImageClass : 'fools-gold-recs',
         title : "Fool's Gold Records",
         // use : 'Logo'
       },
