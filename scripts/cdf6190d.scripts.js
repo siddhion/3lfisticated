@@ -107,13 +107,13 @@ angular.module('maxmythicApp')
     $scope.designTiles = [
       {
         url : '/design/flosstradamus',
-        bgImageClass : 'flosstradamus',
+        bgImageClass : 'chaos-conspiracies',
         title : "Flosstradamus PLURNT",
         // use : 'Logo'
       },
       {
         url : '/design/fools-gold-recs',
-        bgImageClass : 'fools-gold-recs',
+        bgImageClass : 'maxmythic-dot-com',
         title : "Fool's Gold Records",
         // use : 'Logo'
       },
@@ -200,12 +200,6 @@ angular.module('maxmythicApp')
         bgImageClass : 'the-yellers',
         title : 'The Yellers',
         // use : 'Logo'
-      },
-      {
-        url : '/design/chaos-conspiracies',
-        bgImageClass : 'chaos-conspiracies',
-        title : 'Chaos Concpiracies',
-        // use : 'Wall Paper'
       },
       {
         url : '/design/fame-logo',
