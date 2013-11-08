@@ -89,10 +89,6 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/chaos-conspiracies.html',
         controller: 'MainCtrl'
       })
-      .when('/design/maxmythic-dot-com', {
-        templateUrl: '/views/design/maxmythic-dot-com.html',
-        controller: 'MainCtrl'
-      })
       .when('/design/fools-gold-recs', {
         templateUrl: '/views/design/fools-gold-recs.html',
         controller: 'MainCtrl'
@@ -222,13 +218,7 @@ angular.module('maxmythicApp')
         bgImageClass : 'various-sketches',
         title : 'Various Sketches',
         // use : 'Logo'
-      },
-      {
-        url : '/design/fools-gold-recs',
-        bgImageClass : 'fools-gold-recs',
-        title : "Fool's Gold Records",
-        // use : 'Logo'
-      },
+      }
     ];
   });
 
