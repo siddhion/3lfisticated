@@ -97,6 +97,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/fools-gold-recs.html',
         controller: 'MainCtrl'
       })
+      .when('/design/flosstradamus', {
+        templateUrl: '/views/design/flosstradamus.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -105,6 +109,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/flosstradamus',
+        bgImageClass : 'flosstradamus',
+        title : "Flosstradamus PLURNT",
+        // use : 'Logo'
+      },
       {
         url : '/design/fools-gold-recs',
         bgImageClass : 'maxmythic-dot-com',
