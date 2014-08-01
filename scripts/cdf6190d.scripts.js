@@ -6,11 +6,11 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
     $locationProvider.hashPrefix = '!';
     $routeProvider
       .when('/', {
-        templateUrl: '/views/design.html',
+        templateUrl: 'https://rawgit.com/siddhion/maxmythic/gh-pages/views/design.html',
         controller: 'MainCtrl'
       })
       .when('/design', {
-        templateUrl: '/views/design.html',
+        templateUrl: 'https://rawgit.com/siddhion/maxmythic/gh-pages/views/design.html',
         controller: 'MainCtrl'
       })
       .when('/about', {
