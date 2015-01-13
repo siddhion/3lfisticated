@@ -601,16 +601,16 @@ html {
 }
 
 /* --------------------------------FONTS------------------------------------------- */
-// @font-face {
- //  font-family: "Metrophobic";
-//  src: url(/fonts/Metrophobic/Metrophobic.ttf) format('truetype');
-//}
-
-//@font-face {
-//  font-family: "Open-Sans-Light";
- // src: url(/fonts/Open_Sans/OpenSans-Light.ttf) format('truetype');
-//}
-
+/* @font-face {
+  * font-family: "Metrophobic";
+ * src: url(/fonts/Metrophobic/Metrophobic.ttf) format('truetype');
+*}
+*
+*@font-face {
+*  font-family: "Open-Sans-Light";
+*  src: url(/fonts/Open_Sans/OpenSans-Light.ttf) format('truetype');
+*}
+*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/max\/Desktop\/maxmythic\/app\/styles\/style\.sass}line{font-family:\0000324}}
 .metro, a, p, h1, h2, h3, .image-group-title, ul.pretty li {
   font-family: "Metrophobic", Arial, "Helvetica Neue", Helvetica, sans-serif;
