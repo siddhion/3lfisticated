@@ -115,7 +115,7 @@ angular.module('maxmythicApp')
     $scope.designTiles = [
     	{
         url : '/design/nik3',
-        bgImageClass : 'popp0rn',
+        bgImageClass : 'pop0rn',
         title : "Nik3 : Rap1d F!r3",
         // use : 'Logo'
       },
