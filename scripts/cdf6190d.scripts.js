@@ -135,7 +135,7 @@ angular.module('maxmythicApp')
     $scope.designTiles = [
     	{
         url : '/design/motion-graphics',
-        bgImageClass : 'nik3',
+        bgImageClass : 'popr0n',
         title : 'Motion Graphics',
         // use : 'Logo'
       },
