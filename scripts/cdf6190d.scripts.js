@@ -29,6 +29,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/cartoons.html',
         controller: 'MainCtrl'
       })
+      .when('/design/patterns', {
+        templateUrl: '/views/design/patterns.html',
+        controller: 'MainCtrl'
+      })
       .when('/design/drawings', {
         templateUrl: '/views/design/drawings.html',
         controller: 'MainCtrl'
@@ -133,6 +137,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/patterns',
+        bgImageClass : 'relationships',
+        title : 'Patterns',
+        // use : 'Logo'
+      },
       {
         url : '/design/3d-design',
         bgImageClass : 'maxmythic-dot-com',
