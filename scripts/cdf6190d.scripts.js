@@ -136,7 +136,7 @@ angular.module('maxmythicApp')
       {
         url : '/design/album-art-and-logos',
         bgImageClass : 'dam-funk',
-        title : 'Dam-Funk',
+        title : 'Album art & Logos',
         // use : 'Logo'
       },
     	{
