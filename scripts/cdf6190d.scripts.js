@@ -34,7 +34,7 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         controller: 'MainCtrl'
       })
       .when('/design/motion-graphics', {
-        templateUrl: '/views/design/drawings.html',
+        templateUrl: '/views/design/motion-graphics.html',
         controller: 'MainCtrl'
       })
       .when('/design/3d-design', {
@@ -133,6 +133,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/drawings',
+        bgImageClass : 'cloudsick',
+        title : 'Cartoons',
+        // use : 'Logo'
+      },
       {
         url : '/design/cartoons',
         bgImageClass : 'troonz',
