@@ -101,6 +101,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/uncamouflaged.html',
         controller: 'MainCtrl'
       })
+      .when('/design/nik3', {
+        templateUrl: '/views/design/nik3.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -109,6 +113,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+    	{
+        url : '/design/nik3',
+        bgImageClass : 'chaos-conspiracies',
+        title : "Nik3 : Rap1d F!r3",
+        // use : 'Logo'
+      },
       {
         url : '/design/uncamouflaged',
         bgImageClass : 'chaos-conspiracies',
