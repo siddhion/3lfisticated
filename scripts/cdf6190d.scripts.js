@@ -133,10 +133,16 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+    	{
+        url : '/design/motion-graphics',
+        bgImageClass : 'nik3',
+        title : 'Motion Graphics',
+        // use : 'Logo'
+      },
       {
         url : '/design/drawings',
         bgImageClass : 'cloudsick',
-        title : 'Cartoons',
+        title : 'Drawings',
         // use : 'Logo'
       },
       {
