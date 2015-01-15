@@ -110,7 +110,7 @@ angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
       {
-        url : '/design/uncamouflagedv',
+        url : '/design/uncamouflaged',
         bgImageClass : 'chaos-conspiracies',
         title : "Uncamouflaged",
         // use : 'Logo'
