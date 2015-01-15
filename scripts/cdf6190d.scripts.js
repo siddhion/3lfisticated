@@ -21,6 +21,26 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/contact.html',
         controller: 'MainCtrl'
       })
+      .when('/design/album-art-and-logos', {
+        templateUrl: '/views/design/album-art-and-logos.html',
+        controller: 'MainCtrl'
+      })
+      .when('/design/cartoons', {
+        templateUrl: '/views/design/cartoons.html',
+        controller: 'MainCtrl'
+      })
+      .when('/design/drawings', {
+        templateUrl: '/views/design/drawings.html',
+        controller: 'MainCtrl'
+      })
+      .when('/design/motion-graphics', {
+        templateUrl: '/views/design/drawings.html',
+        controller: 'MainCtrl'
+      })
+      .when('/design/3d-design', {
+        templateUrl: '/views/design/3d-design.html',
+        controller: 'MainCtrl'
+      })
       .when('/design/vance-and-gary-unhinged', {
         templateUrl: '/views/design/vance-and-gary-unhinged.html',
         controller: 'MainCtrl'
@@ -113,6 +133,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/album-art-and-logos',
+        bgImageClass : 'dam-funk',
+        title : 'Dam-Funk',
+        // use : 'Logo'
+      },
     	{
         url : '/design/nik3',
         bgImageClass : 'popr0n',
@@ -142,12 +168,6 @@ angular.module('maxmythicApp')
         bgImageClass : 'vance-and-gary-unhinged',
         title : 'Vance & Gary Unhinged',
         // use : 'Album Art'
-      },
-      {
-        url : '/design/dam-funk',
-        bgImageClass : 'dam-funk',
-        title : 'Dam-Funk',
-        // use : 'Logo'
       },
       {
         url : '/design/relationships',
