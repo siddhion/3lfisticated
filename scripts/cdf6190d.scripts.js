@@ -134,12 +134,18 @@ angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
       {
+        url : '/design/cartoons',
+        bgImageClass : 'troonz',
+        title : 'Cartoons',
+        // use : 'Logo'
+      },
+      {
         url : '/design/album-art-and-logos',
         bgImageClass : 'dam-funk',
         title : 'Album art & Logos',
         // use : 'Logo'
       },
-    	{
+      {
         url : '/design/nik3',
         bgImageClass : 'popr0n',
         title : "Nik3 : Rap1d F!r3",
