@@ -45,6 +45,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/3d-design.html',
         controller: 'MainCtrl'
       }) 
+      .when('/design/ux', {
+        templateUrl: '/views/design/ux.html',
+        controller: 'MainCtrl'
+      }) 
       .otherwise({
         redirectTo: '/'
       });
@@ -53,6 +57,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/ux',
+        bgImageClass : 'relationships',
+        title : 'UX Design',
+        // use : 'Logo'
+      },
       {
         url : '/design/patterns',
         bgImageClass : 'relationships',
