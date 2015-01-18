@@ -59,7 +59,7 @@ angular.module('maxmythicApp')
     $scope.designTiles = [
       {
         url : '/design/ux',
-        bgImageClass : 'relationships',
+        bgImageClass : 'vance-and-gary-unhinged',
         title : 'UX Design',
         // use : 'Logo'
       },
