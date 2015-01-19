@@ -49,6 +49,10 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
         templateUrl: '/views/design/ux.html',
         controller: 'MainCtrl'
       }) 
+      .when('/design/3lf', {
+        templateUrl: '/views/design/3lf.html',
+        controller: 'MainCtrl'
+      }) 
       .otherwise({
         redirectTo: '/'
       });
@@ -57,6 +61,12 @@ angular.module('maxmythicApp', ['ngResponsiveImages'])
 angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
+      {
+        url : '/design/3lf',
+        bgImageClass : 'lemy-leopard-soh',
+        title : '3lf : Web App UX Mockups',
+        // use : 'Logo'
+      },
       {
         url : '/design/ux',
         bgImageClass : 'vance-and-gary-unhinged',
