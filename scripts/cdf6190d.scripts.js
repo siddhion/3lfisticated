@@ -58,7 +58,7 @@ angular.module('3lfistApp', ['ngResponsiveImages'])
       });
   });
 
-angular.module('maxmythicApp')
+angular.module('3lfistApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
       {
