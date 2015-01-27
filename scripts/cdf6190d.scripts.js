@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('elfistApp', ['ngResponsiveImages'])
+angular.module('maxmythicApp', ['ngResponsiveImages'])
   .config(function ($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);
     $locationProvider.hashPrefix = '!';
@@ -58,7 +58,7 @@ angular.module('elfistApp', ['ngResponsiveImages'])
       });
   });
 
-angular.module('elfistApp')
+angular.module('maxmythicApp')
   .controller('MainCtrl', function ($scope) {
     $scope.designTiles = [
       {
