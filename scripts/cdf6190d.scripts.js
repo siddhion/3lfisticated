@@ -68,15 +68,15 @@ angular.module('3lfistApp')
         // use : 'Logo'
       },
       {
-        url : '/design/ux',
-        bgImageClass : 'vance-and-gary-unhinged',
-        title : 'UX Design',
-        // use : 'Logo'
-      },
-      {
         url : '/design/patterns',
         bgImageClass : 'relationships',
         title : 'Patterns',
+        // use : 'Logo'
+      },
+      {
+        url : '/design/ux',
+        bgImageClass : 'vance-and-gary-unhinged',
+        title : 'UX Design',
         // use : 'Logo'
       },
       {
@@ -86,15 +86,15 @@ angular.module('3lfistApp')
         // use : 'Logo'
       },
       {
-        url : '/design/motion-graphics',
-        bgImageClass : 'popr0n',
-        title : 'Motion Graphics',
-        // use : 'Logo'
-      },
-      {
         url : '/design/drawings',
         bgImageClass : 'cloudsick',
         title : 'Drawings',
+        // use : 'Logo'
+      },
+      {
+        url : '/design/motion-graphics',
+        bgImageClass : 'popr0n',
+        title : 'Motion Graphics',
         // use : 'Logo'
       },
       {
