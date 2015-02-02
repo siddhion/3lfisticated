@@ -68,11 +68,12 @@ angular.module('3lfistApp')
         // use : 'Logo'
       },
       {
-        url : '/design/patterns',
-        bgImageClass : 'relationships',
-        title : 'Patterns',
+        url : '/design/motion-graphics',
+        bgImageClass : 'popr0n',
+        title : 'Motion Graphics',
         // use : 'Logo'
       },
+      
       {
         url : '/design/ux',
         bgImageClass : 'vance-and-gary-unhinged',
@@ -92,9 +93,15 @@ angular.module('3lfistApp')
         // use : 'Logo'
       },
       {
-        url : '/design/motion-graphics',
-        bgImageClass : 'popr0n',
-        title : 'Motion Graphics',
+        url : '/design/album-art-and-logos',
+        bgImageClass : 'dam-funk',
+        title : 'Album art & Logos',
+        // use : 'Logo'
+      }
+      {
+        url : '/design/patterns',
+        bgImageClass : 'relationships',
+        title : 'Patterns',
         // use : 'Logo'
       },
       {
@@ -103,12 +110,7 @@ angular.module('3lfistApp')
         title : 'Cartoons',
         // use : 'Logo'
       },
-      {
-        url : '/design/album-art-and-logos',
-        bgImageClass : 'dam-funk',
-        title : 'Album art & Logos',
-        // use : 'Logo'
-      }
+      
     ];
   });
 
