@@ -73,7 +73,6 @@ angular.module('3lfistApp')
         title : 'Motion Graphics',
         // use : 'Logo'
       },
-      
       {
         url : '/design/ux',
         bgImageClass : 'vance-and-gary-unhinged',
@@ -97,7 +96,7 @@ angular.module('3lfistApp')
         bgImageClass : 'dam-funk',
         title : 'Album art & Logos',
         // use : 'Logo'
-      }
+      },
       {
         url : '/design/patterns',
         bgImageClass : 'relationships',
@@ -109,8 +108,7 @@ angular.module('3lfistApp')
         bgImageClass : 'troonz',
         title : 'Cartoons',
         // use : 'Logo'
-      },
-      
+      }
     ];
   });
 
