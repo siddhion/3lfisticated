@@ -64,7 +64,7 @@ angular.module('3lfistApp')
       {
         url : '/design/3lf',
         bgImageClass : 'lemy-leopard-soh',
-        title : '3lf : Web App UX Mockups',
+        title : '3lf : Web App UX Design',
         // use : 'Logo'
       },
       {
